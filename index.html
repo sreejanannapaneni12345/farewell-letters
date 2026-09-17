@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,76 +12,196 @@
 
 <body>
 
-    <!-- Falling gold particles -->
+    <!-- =========================================
+         FALLING GOLD SPARKLES
+    ========================================== -->
+
     <div id="sparkles"></div>
 
-    <!-- Main scene -->
+
+    <!-- =========================================
+         CELEBRATION CONFETTI
+    ========================================== -->
+
+    <div id="confetti"></div>
+
+
+    <!-- =========================================
+         MAIN SCENE
+    ========================================== -->
+
     <main class="scene">
 
-        <header class="intro">
-            <p class="eyebrow">A LITTLE SOMETHING BEFORE WE GO</p>
 
-            <h1>Until Our Paths<br>Cross Again</h1>
+        <!-- =====================================
+             INTRODUCTION
+        ====================================== -->
+
+        <header class="intro">
+
+            <p class="eyebrow">
+                🤍
+            </p>
+
+            <h1>
+                Until Our Paths<br>
+                Cross Again
+            </h1>
 
             <p class="subtitle">
-                Five letters. Five people. A lot of memories.
+                A little expression of gratitude from me
             </p>
 
             <div class="instruction">
                 <span>✦</span>
-                Choose a letter
+                Please click on your letter
                 <span>✦</span>
             </div>
+
         </header>
 
 
-        <!-- Desk -->
+        <!-- =====================================
+             OFFICE DESK
+        ====================================== -->
+
         <section class="desk">
 
             <div class="desk-light"></div>
 
-            <!-- Letters -->
+
+            <!-- =================================
+                 LETTERS
+            ================================== -->
+
             <div class="letters">
 
-                <button class="letter" data-person="ben">
+
+                <!-- BEN -->
+
+                <button
+                    class="letter"
+                    data-person="ben"
+                    aria-label="Open Ben's letter">
+
                     <span class="seal">✦</span>
-                    <span class="letter-name">Ben</span>
-                    <span class="letter-hint">open letter</span>
+
+                    <span class="letter-name">
+                        Ben
+                    </span>
+
+                    <span class="letter-hint">
+                        open letter
+                    </span>
+
                 </button>
 
-                <button class="letter" data-person="rafael">
+
+                <!-- RAFAEL -->
+
+                <button
+                    class="letter"
+                    data-person="rafael"
+                    aria-label="Open Rafa's letter">
+
                     <span class="seal">✦</span>
-                    <span class="letter-name">Rafa</span>
-                    <span class="letter-hint">open letter</span>
+
+                    <span class="letter-name">
+                        Rafa
+                    </span>
+
+                    <span class="letter-hint">
+                        open letter
+                    </span>
+
                 </button>
 
-                <button class="letter" data-person="sirisha">
+
+                <!-- SIRISHA -->
+
+                <button
+                    class="letter"
+                    data-person="sirisha"
+                    aria-label="Open Sirisha's letter">
+
                     <span class="seal">✦</span>
-                    <span class="letter-name">Sirisha</span>
-                    <span class="letter-hint">open letter</span>
+
+                    <span class="letter-name">
+                        Sirisha
+                    </span>
+
+                    <span class="letter-hint">
+                        open letter
+                    </span>
+
                 </button>
 
-                <button class="letter" data-person="shruti">
+
+                <!-- SHRUTI -->
+
+                <button
+                    class="letter"
+                    data-person="shruti"
+                    aria-label="Open Shruti's letter">
+
                     <span class="seal">✦</span>
-                    <span class="letter-name">Shruti</span>
-                    <span class="letter-hint">open letter</span>
+
+                    <span class="letter-name">
+                        Shruti
+                    </span>
+
+                    <span class="letter-hint">
+                        open letter
+                    </span>
+
                 </button>
 
-                <button class="letter" data-person="sarah">
+
+                <!-- SARAH -->
+
+                <button
+                    class="letter"
+                    data-person="sarah"
+                    aria-label="Open Sarah's letter">
+
                     <span class="seal">✦</span>
-                    <span class="letter-name">Sarah</span>
-                    <span class="letter-hint">open letter</span>
+
+                    <span class="letter-name">
+                        Sarah
+                    </span>
+
+                    <span class="letter-hint">
+                        open letter
+                    </span>
+
                 </button>
 
             </div>
 
-            <!-- Desk details -->
+
+            <!-- =================================
+                 COFFEE CUP
+            ================================== -->
+
             <div class="desk-object coffee">
+
                 <div class="coffee-cup"></div>
+
                 <div class="coffee-steam"></div>
+
             </div>
+
+
+            <!-- =================================
+                 PEN
+            ================================== -->
 
             <div class="desk-object pen"></div>
+
+
+            <!-- =================================
+                 DESK EDGE
+            ================================== -->
 
             <div class="desk-edge"></div>
 
@@ -89,26 +210,71 @@
     </main>
 
 
-    <!-- Letter popup -->
-    <div class="letter-modal" id="letterModal">
+    <!-- =========================================
+         LETTER MODAL
+    ========================================== -->
+
+    <div
+        class="letter-modal"
+        id="letterModal"
+        aria-hidden="true">
 
         <div class="modal-backdrop"></div>
 
-        <article class="opened-letter">
 
-            <button class="close-letter" id="closeLetter" aria-label="Close letter">
+        <article
+            class="opened-letter"
+            role="dialog"
+            aria-modal="true">
+
+
+            <!-- CLOSE BUTTON -->
+
+            <button
+                class="close-letter"
+                id="closeLetter"
+                aria-label="Close letter">
+
                 ×
+
             </button>
 
-            <div class="paper-decoration">✦</div>
 
-            <p class="letter-to" id="letterTo"></p>
+            <!-- DECORATION -->
 
-            <div class="message" id="letterMessage"></div>
+            <div class="paper-decoration">
+                ✦
+            </div>
+
+
+            <!-- PERSON -->
+
+            <p
+                class="letter-to"
+                id="letterTo">
+            </p>
+
+
+            <!-- MESSAGE -->
+
+            <div
+                class="message"
+                id="letterMessage">
+            </div>
+
+
+            <!-- SIGNATURE -->
 
             <div class="letter-ending">
-                <span>With gratitude,</span>
-                <strong>Until we meet again ✦</strong>
+
+                <span>
+                    With gratitude,
+                </span>
+
+                <strong>
+                    Sreeja
+                </strong>
+
             </div>
 
         </article>
@@ -116,12 +282,21 @@
     </div>
 
 
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
     <footer>
-        Made with gratitude &nbsp;•&nbsp; GRO
+        Made with <span>LOVE</span> and gratitude
+        &nbsp;•&nbsp;
+        Sreeja
     </footer>
 
+
+    <!-- JAVASCRIPT -->
 
     <script src="script.js"></script>
 
 </body>
+
 </html>
