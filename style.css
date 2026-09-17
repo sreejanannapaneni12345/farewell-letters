@@ -8,24 +8,43 @@
     box-sizing: border-box;
 }
 
+
 :root {
+
     --black: #0d0c0b;
+
     --dark: #151311;
+
     --gold: #d4af37;
+
     --gold-light: #f3d675;
+
     --cream: #f7f0df;
+
     --paper: #f8f2e5;
+
     --brown: #34291d;
 }
 
+
+/* =========================================
+   PAGE
+========================================= */
+
 html,
 body {
+
     width: 100%;
+
     min-height: 100%;
+
 }
 
+
 body {
+
     background:
+
         radial-gradient(
             circle at 50% 35%,
             #292219 0%,
@@ -35,28 +54,41 @@ body {
 
     color: var(--cream);
 
-    font-family: Georgia, "Times New Roman", serif;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
     overflow-x: hidden;
+
 }
 
 
 /* =========================================
-   SPARKLES
+   GOLD SPARKLES
 ========================================= */
 
 #sparkles {
+
     position: fixed;
+
     inset: 0;
+
     pointer-events: none;
+
     overflow: hidden;
+
     z-index: 20;
+
 }
 
+
 .sparkle {
+
     position: absolute;
 
     width: 4px;
+
     height: 4px;
 
     background: var(--gold-light);
@@ -64,69 +96,106 @@ body {
     border-radius: 50%;
 
     box-shadow:
+
         0 0 6px var(--gold),
-        0 0 12px rgba(212, 175, 55, 0.6);
+
+        0 0 12px
+        rgba(212, 175, 55, 0.6);
 
     animation:
+
         fall linear infinite,
+
         twinkle ease-in-out infinite;
+
 }
 
+
 @keyframes fall {
+
     from {
-        transform: translateY(-20px) rotate(0deg);
+
+        transform:
+            translateY(-20px)
+            rotate(0deg);
+
     }
 
     to {
-        transform: translateY(110vh) rotate(360deg);
+
+        transform:
+            translateY(110vh)
+            rotate(360deg);
+
     }
+
 }
 
+
 @keyframes twinkle {
-    0%, 100% {
+
+    0%,
+    100% {
+
         opacity: 0.2;
+
         scale: 0.7;
+
     }
 
     50% {
+
         opacity: 1;
+
         scale: 1.4;
+
     }
+
 }
 
 
 /* =========================================
-   SCENE
+   MAIN SCENE
 ========================================= */
 
 .scene {
+
     min-height: 100vh;
 
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
 
     position: relative;
 
-    padding: 70px 25px 0;
+    padding:
+
+        70px 25px 0;
 
     z-index: 2;
+
 }
 
 
 /* =========================================
-   INTRO
+   INTRODUCTION
 ========================================= */
 
 .intro {
+
     text-align: center;
 
     max-width: 700px;
 
     z-index: 5;
+
 }
 
+
 .eyebrow {
+
     color: var(--gold);
 
     font-family: Arial, sans-serif;
@@ -138,10 +207,14 @@ body {
     margin-bottom: 22px;
 
     opacity: 0.9;
+
 }
 
+
 h1 {
-    font-size: clamp(42px, 7vw, 82px);
+
+    font-size:
+        clamp(42px, 7vw, 82px);
 
     font-weight: 400;
 
@@ -152,10 +225,15 @@ h1 {
     color: #f7f0df;
 
     text-shadow:
-        0 2px 30px rgba(212, 175, 55, 0.12);
+
+        0 2px 30px
+        rgba(212, 175, 55, 0.12);
+
 }
 
+
 .subtitle {
+
     margin-top: 25px;
 
     color: #bdb4a3;
@@ -163,9 +241,12 @@ h1 {
     font-size: 17px;
 
     font-style: italic;
+
 }
 
+
 .instruction {
+
     margin-top: 30px;
 
     font-family: Arial, sans-serif;
@@ -179,22 +260,34 @@ h1 {
     color: var(--gold);
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     gap: 15px;
 
-    animation: breathe 2.5s ease-in-out infinite;
+    animation:
+        breathe 2.5s ease-in-out infinite;
+
 }
 
+
 @keyframes breathe {
-    0%, 100% {
+
+    0%,
+    100% {
+
         opacity: 0.5;
+
     }
 
     50% {
+
         opacity: 1;
+
     }
+
 }
 
 
@@ -203,15 +296,18 @@ h1 {
 ========================================= */
 
 .desk {
+
     position: relative;
 
-    width: min(1100px, 95vw);
+    width:
+        min(1100px, 95vw);
 
     height: 440px;
 
     margin-top: 60px;
 
     background:
+
         linear-gradient(
             145deg,
             #443525,
@@ -219,21 +315,28 @@ h1 {
             #18110d
         );
 
-    border-radius: 12px 12px 0 0;
+    border-radius:
+        12px 12px 0 0;
 
     box-shadow:
-        0 -20px 80px rgba(212, 175, 55, 0.06),
-        0 30px 80px rgba(0, 0, 0, 0.8);
+
+        0 -20px 80px
+        rgba(212, 175, 55, 0.06),
+
+        0 30px 80px
+        rgba(0, 0, 0, 0.8);
 
     overflow: hidden;
 
     z-index: 4;
+
 }
 
 
-/* Desk grain */
+/* DESK GRAIN */
 
 .desk::before {
+
     content: "";
 
     position: absolute;
@@ -243,6 +346,7 @@ h1 {
     opacity: 0.12;
 
     background:
+
         repeating-linear-gradient(
             90deg,
             transparent 0,
@@ -252,23 +356,31 @@ h1 {
         );
 
     pointer-events: none;
+
 }
 
 
-/* Desk lamp glow */
+/* =========================================
+   DESK LIGHT
+========================================= */
 
 .desk-light {
+
     position: absolute;
 
     width: 700px;
+
     height: 500px;
 
     top: -300px;
+
     left: 50%;
 
-    transform: translateX(-50%);
+    transform:
+        translateX(-50%);
 
     background:
+
         radial-gradient(
             ellipse,
             rgba(255, 214, 120, 0.16),
@@ -276,20 +388,24 @@ h1 {
         );
 
     pointer-events: none;
+
 }
 
 
 /* =========================================
-   LETTERS
+   LETTER CONTAINER
 ========================================= */
 
 .letters {
+
     position: absolute;
 
     left: 50%;
+
     top: 80px;
 
-    transform: translateX(-50%);
+    transform:
+        translateX(-50%);
 
     width: 85%;
 
@@ -302,17 +418,26 @@ h1 {
     gap: 18px;
 
     z-index: 5;
+
 }
 
+
+/* =========================================
+   LETTERS
+========================================= */
+
 .letter {
+
     position: relative;
 
     width: 175px;
+
     height: 235px;
 
     border: none;
 
     background:
+
         linear-gradient(
             135deg,
             #faf4e6,
@@ -326,105 +451,159 @@ h1 {
     border-radius: 3px;
 
     box-shadow:
-        0 12px 20px rgba(0, 0, 0, 0.35),
-        inset 0 0 0 1px rgba(90, 65, 35, 0.15);
+
+        0 12px 20px
+        rgba(0, 0, 0, 0.35),
+
+        inset 0 0 0 1px
+        rgba(90, 65, 35, 0.15);
 
     transform:
         rotate(var(--rotation, 0deg));
 
     transition:
+
         transform 0.4s ease,
+
         box-shadow 0.4s ease;
+
 }
 
 
-/* Individual rotations */
+/* LETTER ROTATIONS */
 
 .letter:nth-child(1) {
+
     --rotation: -7deg;
+
     margin-bottom: 12px;
+
 }
+
 
 .letter:nth-child(2) {
+
     --rotation: 4deg;
+
     margin-bottom: 0;
+
 }
+
 
 .letter:nth-child(3) {
+
     --rotation: -2deg;
+
     margin-bottom: 18px;
+
 }
+
 
 .letter:nth-child(4) {
+
     --rotation: 6deg;
+
     margin-bottom: 2px;
+
 }
+
 
 .letter:nth-child(5) {
+
     --rotation: -5deg;
+
     margin-bottom: 14px;
+
 }
 
 
+/* HOVER */
+
 .letter:hover {
+
     transform:
+
         translateY(-18px)
+
         rotate(0deg)
+
         scale(1.03);
 
     box-shadow:
-        0 25px 35px rgba(0, 0, 0, 0.45),
-        0 0 35px rgba(212, 175, 55, 0.12);
+
+        0 25px 35px
+        rgba(0, 0, 0, 0.45),
+
+        0 0 35px
+        rgba(212, 175, 55, 0.12);
+
 }
 
 
-/* Envelope lines */
+/* ENVELOPE FOLD */
 
 .letter::before {
+
     content: "";
 
     position: absolute;
 
     left: 0;
+
     right: 0;
 
     top: 0;
 
     height: 50%;
 
-    border-bottom: 1px solid rgba(90, 65, 35, 0.15);
+    border-bottom:
+        1px solid
+        rgba(90, 65, 35, 0.15);
 
-    clip-path: polygon(
-        0 0,
-        50% 65%,
-        100% 0
-    );
+    clip-path:
 
-    background: rgba(120, 90, 45, 0.06);
+        polygon(
+            0 0,
+            50% 65%,
+            100% 0
+        );
+
+    background:
+
+        rgba(120, 90, 45, 0.06);
+
 }
 
 
-/* Gold seal */
+/* =========================================
+   GOLD SEAL
+========================================= */
 
 .seal {
+
     position: absolute;
 
     left: 50%;
+
     top: 40%;
 
-    transform: translate(-50%, -50%);
+    transform:
+        translate(-50%, -50%);
 
     width: 43px;
+
     height: 43px;
 
     display: flex;
 
     justify-content: center;
+
     align-items: center;
 
     border-radius: 50%;
 
     background:
+
         radial-gradient(
             circle,
             #f0ce61,
@@ -436,17 +615,26 @@ h1 {
     font-size: 18px;
 
     box-shadow:
-        0 3px 8px rgba(0,0,0,0.25),
-        0 0 12px rgba(212,175,55,0.2);
+
+        0 3px 8px
+        rgba(0,0,0,0.25),
+
+        0 0 12px
+        rgba(212,175,55,0.2);
+
 }
 
 
-/* Name */
+/* =========================================
+   LETTER NAME
+========================================= */
 
 .letter-name {
+
     position: absolute;
 
     left: 0;
+
     right: 0;
 
     top: 58%;
@@ -456,17 +644,22 @@ h1 {
     font-size: 25px;
 
     font-weight: 500;
+
 }
 
 
-/* Hint */
+/* =========================================
+   LETTER HINT
+========================================= */
 
 .letter-hint {
+
     position: absolute;
 
     bottom: 20px;
 
     left: 0;
+
     right: 0;
 
     text-align: center;
@@ -483,11 +676,16 @@ h1 {
 
     opacity: 0;
 
-    transition: opacity 0.3s ease;
+    transition:
+        opacity 0.3s ease;
+
 }
 
+
 .letter:hover .letter-hint {
+
     opacity: 1;
+
 }
 
 
@@ -496,83 +694,123 @@ h1 {
 ========================================= */
 
 .coffee {
+
     position: absolute;
 
     right: 65px;
+
     bottom: 70px;
 
     width: 90px;
+
     height: 90px;
 
     opacity: 0.85;
+
 }
 
+
 .coffee-cup {
+
     position: absolute;
 
     width: 65px;
+
     height: 45px;
 
     background:
+
         linear-gradient(
             135deg,
             #19130e,
             #35271b
         );
 
-    border-radius: 0 0 25px 25px;
+    border-radius:
+        0 0 25px 25px;
 
     bottom: 5px;
+
     left: 10px;
 
     box-shadow:
-        0 8px 10px rgba(0,0,0,0.4);
+
+        0 8px 10px
+        rgba(0,0,0,0.4);
+
 }
 
+
 .coffee-cup::after {
+
     content: "";
 
     position: absolute;
 
     right: -15px;
+
     top: 10px;
 
     width: 22px;
+
     height: 20px;
 
-    border: 5px solid #2a2017;
+    border:
+        5px solid #2a2017;
 
     border-left: none;
 
-    border-radius: 0 15px 15px 0;
+    border-radius:
+        0 15px 15px 0;
+
 }
 
+
 .coffee-steam {
+
     position: absolute;
 
     width: 30px;
+
     height: 35px;
 
     left: 27px;
+
     top: 0;
 
-    border-left: 2px solid rgba(255,255,255,0.15);
+    border-left:
+        2px solid
+        rgba(255,255,255,0.15);
 
     border-radius: 50%;
 
-    animation: steam 3s ease-in-out infinite;
+    animation:
+        steam 3s ease-in-out infinite;
+
 }
 
+
 @keyframes steam {
-    0%, 100% {
+
+    0%,
+    100% {
+
         opacity: 0;
-        transform: translateY(8px);
+
+        transform:
+            translateY(8px);
+
     }
 
     50% {
+
         opacity: 1;
-        transform: translateY(-4px);
+
+        transform:
+            translateY(-4px);
+
     }
+
 }
 
 
@@ -581,15 +819,19 @@ h1 {
 ========================================= */
 
 .pen {
+
     position: absolute;
 
     width: 170px;
+
     height: 5px;
 
     right: 170px;
+
     bottom: 70px;
 
     background:
+
         linear-gradient(
             90deg,
             #7d5c19,
@@ -597,11 +839,16 @@ h1 {
             #7d5c19
         );
 
-    transform: rotate(-17deg);
+    transform:
+        rotate(-17deg);
 
     border-radius: 10px;
 
-    box-shadow: 0 3px 8px rgba(0,0,0,0.5);
+    box-shadow:
+
+        0 3px 8px
+        rgba(0,0,0,0.5);
+
 }
 
 
@@ -610,30 +857,114 @@ h1 {
 ========================================= */
 
 .desk-edge {
+
     position: absolute;
 
     bottom: 0;
 
     left: 0;
+
     right: 0;
 
     height: 35px;
 
     background:
+
         linear-gradient(
             #2a1d13,
             #110c08
         );
 
-    border-top: 2px solid rgba(212,175,55,0.08);
+    border-top:
+        2px solid
+        rgba(212,175,55,0.08);
+
 }
 
 
 /* =========================================
-   MODAL
+   CONFETTI
+========================================= */
+
+#confetti {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 150;
+
+}
+
+
+.confetti-piece {
+
+    position: absolute;
+
+    top: -20px;
+
+    width: 7px;
+
+    height: 12px;
+
+    opacity: 0;
+
+    animation:
+        confettiFall
+        3.5s
+        ease-out
+        forwards;
+
+}
+
+
+@keyframes confettiFall {
+
+    0% {
+
+        transform:
+
+            translateY(-20px)
+
+            rotate(0deg);
+
+        opacity: 1;
+
+    }
+
+    20% {
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        transform:
+
+            translateY(110vh)
+
+            translateX(var(--drift))
+
+            rotate(720deg);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* =========================================
+   LETTER MODAL
 ========================================= */
 
 .letter-modal {
+
     position: fixed;
 
     inset: 0;
@@ -643,6 +974,7 @@ h1 {
     display: flex;
 
     justify-content: center;
+
     align-items: center;
 
     padding: 25px;
@@ -651,43 +983,61 @@ h1 {
 
     pointer-events: none;
 
-    transition: opacity 0.4s ease;
+    transition:
+        opacity 0.4s ease;
+
 }
 
+
 .letter-modal.active {
+
     opacity: 1;
 
     pointer-events: auto;
+
 }
 
+
+/* BACKDROP */
+
 .modal-backdrop {
+
     position: absolute;
 
     inset: 0;
 
     background:
+
         rgba(5, 4, 3, 0.88);
 
-    backdrop-filter: blur(8px);
+    backdrop-filter:
+        blur(8px);
+
 }
 
 
-/* Opened paper */
+/* =========================================
+   OPENED LETTER
+========================================= */
 
 .opened-letter {
+
     position: relative;
 
     z-index: 2;
 
-    width: min(720px, 94vw);
+    width:
+        min(720px, 94vw);
 
     max-height: 85vh;
 
     overflow-y: auto;
 
-    padding: 70px 80px;
+    padding:
+        70px 80px;
 
     background:
+
         linear-gradient(
             135deg,
             #faf5e9,
@@ -697,30 +1047,50 @@ h1 {
     color: #2d261d;
 
     box-shadow:
-        0 30px 100px rgba(0,0,0,0.7),
-        0 0 50px rgba(212,175,55,0.1);
+
+        0 30px 100px
+        rgba(0,0,0,0.7),
+
+        0 0 50px
+        rgba(212,175,55,0.1);
 
     transform:
+
         translateY(30px)
+
         scale(0.95);
 
     transition:
-        transform 0.5s cubic-bezier(.2,.8,.2,1);
+
+        transform
+        0.5s
+        cubic-bezier(.2,.8,.2,1);
+
 }
 
-.letter-modal.active .opened-letter {
+
+.letter-modal.active
+.opened-letter {
+
     transform:
+
         translateY(0)
+
         scale(1);
+
 }
 
 
-/* Close */
+/* =========================================
+   CLOSE BUTTON
+========================================= */
 
 .close-letter {
+
     position: absolute;
 
     right: 25px;
+
     top: 20px;
 
     border: none;
@@ -733,19 +1103,28 @@ h1 {
 
     cursor: pointer;
 
-    transition: transform 0.2s ease;
+    transition:
+        transform 0.2s ease;
+
 }
+
 
 .close-letter:hover {
-    transform: rotate(90deg);
+
+    transform:
+        rotate(90deg);
 
     color: #2d261d;
+
 }
 
 
-/* Letter content */
+/* =========================================
+   LETTER CONTENT
+========================================= */
 
 .paper-decoration {
+
     color: #b18a1d;
 
     font-size: 25px;
@@ -753,34 +1132,52 @@ h1 {
     text-align: center;
 
     margin-bottom: 25px;
+
 }
 
+
 .letter-to {
+
     font-size: 28px;
 
     margin-bottom: 25px;
 
     font-style: italic;
+
 }
 
+
 .message {
+
     font-size: 17px;
 
     line-height: 1.8;
 
     color: #40372b;
+
 }
+
 
 .message p {
+
     margin-bottom: 20px;
+
 }
 
+
+/* =========================================
+   SIGNATURE
+========================================= */
+
 .letter-ending {
+
     margin-top: 40px;
 
     padding-top: 25px;
 
-    border-top: 1px solid rgba(90,65,35,0.15);
+    border-top:
+        1px solid
+        rgba(90,65,35,0.15);
 
     display: flex;
 
@@ -791,14 +1188,22 @@ h1 {
     color: #75664d;
 
     font-style: italic;
+
 }
 
+
 .letter-ending strong {
+
     color: #9a7618;
 
-    font-size: 18px;
+    font-size: 22px;
 
     font-weight: 400;
+
+    font-style: normal;
+
+    letter-spacing: 0.5px;
+
 }
 
 
@@ -807,6 +1212,7 @@ h1 {
 ========================================= */
 
 footer {
+
     position: relative;
 
     z-index: 5;
@@ -824,103 +1230,222 @@ footer {
     letter-spacing: 2px;
 
     text-transform: uppercase;
+
+}
+
+
+footer span {
+
+    color: var(--gold-light);
+
+    letter-spacing: 3px;
+
 }
 
 
 /* =========================================
-   MOBILE
+   MOBILE — TABLET
 ========================================= */
 
 @media (max-width: 800px) {
 
     .scene {
+
         padding-top: 50px;
+
     }
 
+
     .desk {
+
         height: 700px;
 
         margin-top: 40px;
+
     }
 
+
     .letters {
+
         width: 90%;
 
         top: 55px;
 
         display: grid;
 
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+            repeat(2, 1fr);
 
         gap: 18px;
+
     }
 
+
     .letter {
+
         width: 100%;
 
         height: 190px;
+
     }
 
+
     .letter:nth-child(3) {
+
         grid-column: span 2;
 
         width: 48%;
 
         justify-self: center;
+
     }
+
 
     .coffee {
+
         right: 25px;
+
         bottom: 70px;
+
     }
+
 
     .pen {
+
         right: 110px;
+
         bottom: 60px;
+
     }
+
 
     .opened-letter {
-        padding: 55px 30px;
+
+        padding:
+            55px 30px;
+
     }
+
 
     .message {
+
         font-size: 16px;
+
     }
+
 }
 
+
+/* =========================================
+   MOBILE — PHONE
+========================================= */
 
 @media (max-width: 480px) {
 
     h1 {
+
         font-size: 42px;
+
     }
+
+
+    .eyebrow {
+
+        font-size: 9px;
+
+        letter-spacing: 3px;
+
+    }
+
 
     .subtitle {
+
         font-size: 15px;
+
     }
+
+
+    .instruction {
+
+        font-size: 9px;
+
+        letter-spacing: 2px;
+
+    }
+
 
     .desk {
+
         width: 94vw;
+
     }
+
 
     .letter {
+
         height: 175px;
+
     }
+
 
     .letter-name {
+
         font-size: 20px;
+
     }
+
 
     .seal {
+
         width: 36px;
+
         height: 36px;
+
     }
+
 
     .coffee {
+
         display: none;
+
     }
 
+
     .pen {
+
         right: 40px;
+
     }
+
+
+    .opened-letter {
+
+        padding:
+            50px 25px;
+
+    }
+
+
+    .letter-to {
+
+        font-size: 24px;
+
+    }
+
+
+    .message {
+
+        font-size: 15px;
+
+        line-height: 1.7;
+
+    }
+
+
+    footer {
+
+        font-size: 8px;
+
+    }
+
 }
