@@ -1,33 +1,127 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>A Little Something For You 💌</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Until Our Paths Cross Again</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>A Little Something For You 💌</h1>
+    <!-- Falling gold particles -->
+    <div id="sparkles"></div>
 
-    <p>Before I say goodbye, I wanted to leave something special behind.</p>
+    <!-- Main scene -->
+    <main class="scene">
 
-    <h2>Choose your envelope</h2>
+        <header class="intro">
+            <p class="eyebrow">A LITTLE SOMETHING BEFORE WE GO</p>
 
-    <div class="envelope-container">
+            <h1>Until Our Paths<br>Cross Again</h1>
 
-        <div class="envelope">
-            <div class="flap"></div>
-            <div class="letter-preview">
-                💌
+            <p class="subtitle">
+                Five letters. Five people. A lot of memories.
+            </p>
+
+            <div class="instruction">
+                <span>✦</span>
+                Choose a letter
+                <span>✦</span>
             </div>
-        </div>
+        </header>
 
-        <p>Sarah</p>
+
+        <!-- Desk -->
+        <section class="desk">
+
+            <div class="desk-light"></div>
+
+            <!-- Letters -->
+            <div class="letters">
+
+                <button class="letter" data-person="ben">
+                    <span class="seal">✦</span>
+                    <span class="letter-name">Ben</span>
+                    <span class="letter-hint">open letter</span>
+                </button>
+
+                <button class="letter" data-person="rafael">
+                    <span class="seal">✦</span>
+                    <span class="letter-name">Rafa</span>
+                    <span class="letter-hint">open letter</span>
+                </button>
+
+                <button class="letter" data-person="sirisha">
+                    <span class="seal">✦</span>
+                    <span class="letter-name">Sirisha</span>
+                    <span class="letter-hint">open letter</span>
+                </button>
+
+                <button class="letter" data-person="shruti">
+                    <span class="seal">✦</span>
+                    <span class="letter-name">Shruti</span>
+                    <span class="letter-hint">open letter</span>
+                </button>
+
+                <button class="letter" data-person="sarah">
+                    <span class="seal">✦</span>
+                    <span class="letter-name">Sarah</span>
+                    <span class="letter-hint">open letter</span>
+                </button>
+
+            </div>
+
+            <!-- Desk details -->
+            <div class="desk-object coffee">
+                <div class="coffee-cup"></div>
+                <div class="coffee-steam"></div>
+            </div>
+
+            <div class="desk-object pen"></div>
+
+            <div class="desk-edge"></div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Letter popup -->
+    <div class="letter-modal" id="letterModal">
+
+        <div class="modal-backdrop"></div>
+
+        <article class="opened-letter">
+
+            <button class="close-letter" id="closeLetter" aria-label="Close letter">
+                ×
+            </button>
+
+            <div class="paper-decoration">✦</div>
+
+            <p class="letter-to" id="letterTo"></p>
+
+            <div class="message" id="letterMessage"></div>
+
+            <div class="letter-ending">
+                <span>With gratitude,</span>
+                <strong>Until we meet again ✦</strong>
+            </div>
+
+        </article>
 
     </div>
 
-</body>
 
+    <footer>
+        Made with gratitude &nbsp;•&nbsp; GRO
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
 </html>
